@@ -1,1 +1,1 @@
-import './component/div_cpn';
+import './component/cpns';

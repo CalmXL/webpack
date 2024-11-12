@@ -13,13 +13,22 @@ module.exports = {
         test: /\.css$/,
         use: [
           // use 中的多个 loader 顺序从后往前
-          {
-            loader: 'style-loader',
-          },
-          {
-            loader: 'css-loader',
-          },
+          // {
+          //   loader: 'style-loader',
+          // },
+          // {
+          //   loader: 'css-loader',
+          // },
+          // 简写: loader 只有一个
+          // 1. loader: 'css-loader'
+          // 多个 loader ['style-loader', 'css-loader']
+          'style-loader',
+          'css-loader',
         ],
+      },
+      {
+        test: /\.less$/,
+        use: ['style-loader', 'css-loader', 'less-loader'],
       },
     ],
   },
