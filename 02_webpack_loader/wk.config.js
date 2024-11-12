@@ -24,11 +24,20 @@ module.exports = {
           // 多个 loader ['style-loader', 'css-loader']
           'style-loader',
           'css-loader',
+          'postcss-loader',
+          // {
+          //   loader: 'postcss-loader',
+          //   options: {
+          //     postcssOptions: {
+          //       plugins: ['autoprefixer'],
+          //     },
+          //   },
+          // },
         ],
       },
       {
         test: /\.less$/,
-        use: ['style-loader', 'css-loader', 'less-loader'],
+        use: ['style-loader', 'css-loader', 'less-loader', 'postcss-loader'],
       },
     ],
   },
