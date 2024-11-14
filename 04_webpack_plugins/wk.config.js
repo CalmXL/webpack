@@ -1,5 +1,6 @@
 const path = require('path');
 const { VueLoaderPlugin } = require('vue-loader/dist/index');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: './src/main.js',
@@ -65,7 +66,7 @@ module.exports = {
       },
     ],
   },
-  plugins: [new VueLoaderPlugin()],
+  plugins: [new VueLoaderPlugin(), new CleanWebpackPlugin()],
   resolve: {
     // 添加拓展后缀名
     extensions: ['.js', 'json', '.vue', '.jsx', '.ts', '.tsx'],
