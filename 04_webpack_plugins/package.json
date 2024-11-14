@@ -1,0 +1,30 @@
+{
+  "name": "03_webpack_img_js_vue",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config wk.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@babel/plugin-transform-arrow-functions": "^7.25.9",
+    "@babel/plugin-transform-block-scoping": "^7.25.9",
+    "@babel/preset-env": "^7.26.0",
+    "autoprefixer": "^10.4.20",
+    "babel-loader": "^9.2.1",
+    "css-loader": "^7.1.2",
+    "less-loader": "^12.2.0",
+    "postcss-loader": "^8.1.1",
+    "postcss-preset-env": "^10.1.0",
+    "style-loader": "^4.0.0",
+    "vue-loader": "^17.4.2",
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "vue": "^3.5.12"
+  }
+}

@@ -1,0 +1,12 @@
+.content {
+  font-size: 20px;
+  color: orange;
+
+  user-select: none;
+  background-color: #66666666;
+}
+
+img {
+  width: 1000px;
+  height: 600px;
+}
