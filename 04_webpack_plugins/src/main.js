@@ -19,3 +19,8 @@ sum(1, 2);
 for (let i = 0; i < 5; i++) {
   console.log(i);
 }
+
+// 使用 DefinePlugin 注入的变量
+console.log(codewhy, counter);
+
+console.log(process.env.NODE_ENV);

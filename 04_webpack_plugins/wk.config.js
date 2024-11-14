@@ -1,8 +1,11 @@
 const path = require('path');
 const { VueLoaderPlugin } = require('vue-loader/dist/index');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { DefinePlugin } = require('webpack');
 
 module.exports = {
+  mode: 'development',
   entry: './src/main.js',
   output: {
     filename: 'bundle.js',
@@ -66,7 +69,20 @@ module.exports = {
       },
     ],
   },
-  plugins: [new VueLoaderPlugin(), new CleanWebpackPlugin()],
+  plugins: [
+    new VueLoaderPlugin(),
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      title: '电商项目',
+      template: './index.html',
+    }),
+    new DefinePlugin({
+      // 定义的东西会被执行
+      BASE_URL: "'./'",
+      codewhy: "'why'",
+      counter: "'123'",
+    }),
+  ],
   resolve: {
     // 添加拓展后缀名
     extensions: ['.js', 'json', '.vue', '.jsx', '.ts', '.tsx'],
