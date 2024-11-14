@@ -1,4 +1,5 @@
 const path = require('path');
+const { VueLoaderPlugin } = require('vue-loader/dist/index');
 
 module.exports = {
   entry: './src/main.js',
@@ -58,6 +59,19 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.vue$/,
+        use: ['vue-loader'],
+      },
     ],
+  },
+  plugins: [new VueLoaderPlugin()],
+  resolve: {
+    // 添加拓展后缀名
+    extensions: ['.js', 'json', '.vue', '.jsx', '.ts', '.tsx'],
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+      utils: path.resolve(__dirname, './src/utils'),
+    },
   },
 };

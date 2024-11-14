@@ -1,4 +1,9 @@
 // import './component/cpns';
+import { createApp } from 'vue';
+import Hello from './vue-demo/Hello';
+import './utils/abc/cba/nba/test';
+
+createApp(Hello).mount('#app');
 
 const message = 'Hello, World';
 
