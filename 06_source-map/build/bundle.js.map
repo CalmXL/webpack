@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "file": "bundle.js",
+  "mappings": "mBAIAA,MCDAC,QAAQC,IADQ,gBAGhBD,QAAQC,IAAIC,SAGVF,QAAQC,IAAI,uB",
+  "sources": [
+    "webpack://source-map/./src/utils/math.js",
+    "webpack://source-map/./src/main.js"
+  ],
+  "sourcesContent": [
+    "function sum(a, b) {\n  return a + b;\n}\n\ncount;\n\nexport { sum };\n",
+    "import { sum } from './utils/math';\n\nconst message = 'Hello, World';\nconsole.log(message);\n\nconsole.log(address);\n\nconst foo = () => {\n  console.log('foo function exec...');\n};\n\nfoo();\n\nsum(1, 2);\n"
+  ],
+  "names": [
+    "count",
+    "console",
+    "log",
+    "address"
+  ],
+  "sourceRoot": ""
+}
